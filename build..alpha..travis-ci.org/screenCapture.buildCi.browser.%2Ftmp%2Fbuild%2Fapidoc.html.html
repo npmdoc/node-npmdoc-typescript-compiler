@@ -1,0 +1,1243 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/theblacksmith/typescript-compiler">typescript-compiler (v1.4.1-2)</a>
+</h1>
+<h4>Typescript compiler wrapper</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typescript-compiler">module typescript-compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>CompositeCompilerHost
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.FileSource">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>FileSource
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.StringSource">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>StringSource
+            <span class="apidocSignatureSpan">(contents, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.compile">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>compile
+            <span class="apidocSignatureSpan">(files, tscArgs, options, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.compileString">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>compileString
+            <span class="apidocSignatureSpan">(input, tscArgs, options, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.compileStrings">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>compileStrings
+            <span class="apidocSignatureSpan">(input, tscArgs, options, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.compileWithHost">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>compileWithHost
+            <span class="apidocSignatureSpan">(host, sources, tscArgs, options, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typescript-compiler.</span>CompositeCompilerHost.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typescript-compiler.</span>SourceType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typescript-compiler.</span>StringSource.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typescript-compiler.CompositeCompilerHost">module typescript-compiler.CompositeCompilerHost</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.CompositeCompilerHost">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>CompositeCompilerHost
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typescript-compiler.CompositeCompilerHost.prototype">module typescript-compiler.CompositeCompilerHost.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromFile">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_readFromFile
+            <span class="apidocSignatureSpan">(filename, languageVersion, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromStrings">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_readFromStrings
+            <span class="apidocSignatureSpan">(filename, languageVersion, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToFile">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_writeToFile
+            <span class="apidocSignatureSpan">(fileName, data, writeByteOrderMark, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToString">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_writeToString
+            <span class="apidocSignatureSpan">(filename, data, writeByteOrderMark, onError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.addSource">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>addSource
+            <span class="apidocSignatureSpan">(nameOrContents, contents)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCanonicalFileName">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getCanonicalFileName
+            <span class="apidocSignatureSpan">(fileName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCurrentDirectory">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getCurrentDirectory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getDefaultLibFilename">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getDefaultLibFilename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getSourcesFilenames">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getSourcesFilenames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromFiles">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>readFromFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromStrings">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>readFromStrings
+            <span class="apidocSignatureSpan">(fallbackToFiles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.redirectOutput">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>redirectOutput
+            <span class="apidocSignatureSpan">(writer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.useCaseSensitiveFileNames">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>useCaseSensitiveFileNames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToFiles">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>writeToFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToString">
+            function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>writeToString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>outputs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>sources</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typescript-compiler.StringSource">module typescript-compiler.StringSource</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.StringSource.StringSource">
+            function <span class="apidocSignatureSpan">typescript-compiler.</span>StringSource
+            <span class="apidocSignatureSpan">(contents, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.StringSource._nextFilename">
+            function <span class="apidocSignatureSpan">typescript-compiler.StringSource.</span>_nextFilename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">typescript-compiler.StringSource.</span>_counter</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typescript-compiler.StringSource.prototype">module typescript-compiler.StringSource.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typescript-compiler.StringSource.prototype.resetCounter">
+            function <span class="apidocSignatureSpan">typescript-compiler.StringSource.prototype.</span>resetCounter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typescript-compiler" id="apidoc.module.typescript-compiler">module typescript-compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost" id="apidoc.element.typescript-compiler.CompositeCompilerHost">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>CompositeCompilerHost
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CompositeCompilerHost(options) {
+    this._sources = {};
+    this._outputs = {};
+<span class="apidocCodeCommentSpan">    /**
+     * Whether to search for files if a string source isn't found or not
+     */
+</span>    this.fallbackToFiles = false;
+    this.readsFrom = 0 /* File */;
+    this.writesTo = 0 /* File */;
+    // Implementing CompilerHost interface
+    this.getNewLine = function () { return ts.sys.newLine; };
+    this.readsFrom = 0 /* File */;
+    this.getSourceFile = this._readFromFile;
+    this.writesTo = 0 /* File */;
+    this.writeFile = this._writeToFile;
+    this.options = options || {};
+    this.options.defaultLibFilename = this.options.defaultLibFilename || '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function compileWithHost(host, sources, tscArgs, options, onError) {
+    return _compile(host, sources, tscArgs, options, onError);
+}
+tsc.compileWithHost = compileWithHost;
+function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.<span class="apidocCodeKeywordSpan">CompositeCompilerHost</span>(options), ts.map(files, function (f
+) { return new tsc.FileSource(f); }), tscArgs, options, onError);
+}
+tsc.compile = compile;
+function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.FileSource" id="apidoc.element.typescript-compiler.FileSource">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>FileSource
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileSource(filename) {
+    this.filename = filename;
+    this.type = 0 /* File */;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function compileWithHost(host, sources, tscArgs, options, onError) {
+    return _compile(host, sources, tscArgs, options, onError);
+}
+tsc.compileWithHost = compileWithHost;
+function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.CompositeCompilerHost(options), ts.map(files, function (f) { return new tsc.<span class="apidocCodeKeywordSpan
+">FileSource</span>(f); }), tscArgs, options, onError);
+}
+tsc.compile = compile;
+function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.StringSource" id="apidoc.element.typescript-compiler.StringSource">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>StringSource
+        <span class="apidocSignatureSpan">(contents, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StringSource(contents, filename) {
+    if (filename === void 0) { filename = StringSource._nextFilename(); }
+    this.contents = contents;
+    this.filename = filename;
+    this.type = 1 /* String */;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.readsFrom = 0 /* File */;
+    this.getSourceFile = this._readFromFile;
+    return this;
+};
+CompositeCompilerHost.prototype.addSource = function (nameOrContents, contents) {
+    var source;
+    if (typeof contents == 'undefined')
+        source = new tsc.<span class="apidocCodeKeywordSpan">StringSource</span>(nameOrContents);
+    else
+        source = new tsc.StringSource(contents, nameOrContents);
+    this._sources[source.filename] = source.contents;
+    return this;
+};
+CompositeCompilerHost.prototype.getSourcesFilenames = function () {
+    var keys = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.compile" id="apidoc.element.typescript-compiler.compile">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>compile
+        <span class="apidocSignatureSpan">(files, tscArgs, options, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.CompositeCompilerHost(options), ts.map(files, function (f) { return new tsc.FileSource(f); }), tscArgs
+, options, onError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var tsc = require('typescript-compiler');
+```
+
+call it like this...
+
+```javascript
+tsc.<span class="apidocCodeKeywordSpan">compile</span>(['a.ts', 'b.ts'], ['--out', 'out.js'
+;])
+```
+
+or this..
+
+```javascript
+var js = tsc.compileString('class TSC { awesome: boolean = true; }')
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.compileString" id="apidoc.element.typescript-compiler.compileString">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>compileString
+        <span class="apidocSignatureSpan">(input, tscArgs, options, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileString(input, tscArgs, options, onError) {
+    if (typeof input != "string" &amp;&amp; !(input instanceof tsc.StringSource))
+        throw new Error("typescript-compiler#compileString: input parameter should be either a string or a StringSource object");
+    if (input == '')
+        return '';
+    var result = '';
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString().redirectOutput(function (filename, data) {
+return result += data; });
+    _compile(host, [input instanceof tsc.StringSource ? input : new tsc.StringSource(input, 'string.ts')], tscArgs, options, onError
+);
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+tsc.compile(['a.ts', 'b.ts'], ['--out', 'out.js'])
+```
+
+or this..
+
+```javascript
+var js = tsc.<span class="apidocCodeKeywordSpan">compileString</span>('class TSC { awesome: boolean = true; }')
+```
+
+or even this!
+
+```javascript
+var result = tsc.compileStrings({
+				'ship.ts' : 'module Navy { export class Ship { isSunk: boolean; } }',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.compileStrings" id="apidoc.element.typescript-compiler.compileStrings">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>compileStrings
+        <span class="apidocSignatureSpan">(input, tscArgs, options, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+        if (typeof input[0] == 'string') {
+            sources = ts.map(input, function (s) { return new tsc.StringSource(s); });
+        }
+        else if (input[0] instanceof tsc.StringSource) {
+            sources.concat(input);
+        }
+        else
+            throw new Error('Invalid value for input argument');
+    }
+    else if (typeof input == 'object') {
+        for (var k in input)
+            if (input.hasOwnProperty(k))
+                sources.push(new tsc.StringSource(input[k], k));
+    }
+    else
+        throw new Error('Invalid value for input argument');
+    return _compile(host, sources, tscArgs, options, onError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var js = tsc.compileString('class TSC { awesome: boolean = true; }')
+```
+
+or even this!
+
+```javascript
+var result = tsc.<span class="apidocCodeKeywordSpan">compileStrings</span>({
+				'ship.ts' : 'module Navy { export class Ship { isSunk: boolean; } }',
+				'fleet.ts': '///&lt;reference path="ship.ts" /&gt;\n' +
+							'module Navy { \n' +
+							'export class Fleet { ships: Ship[] } '+
+							'}'
+			})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.compileWithHost" id="apidoc.element.typescript-compiler.compileWithHost">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>compileWithHost
+        <span class="apidocSignatureSpan">(host, sources, tscArgs, options, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileWithHost(host, sources, tscArgs, options, onError) {
+    return _compile(host, sources, tscArgs, options, onError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typescript-compiler.CompositeCompilerHost" id="apidoc.module.typescript-compiler.CompositeCompilerHost">module typescript-compiler.CompositeCompilerHost</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.CompositeCompilerHost" id="apidoc.element.typescript-compiler.CompositeCompilerHost.CompositeCompilerHost">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>CompositeCompilerHost
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CompositeCompilerHost(options) {
+    this._sources = {};
+    this._outputs = {};
+<span class="apidocCodeCommentSpan">    /**
+     * Whether to search for files if a string source isn't found or not
+     */
+</span>    this.fallbackToFiles = false;
+    this.readsFrom = 0 /* File */;
+    this.writesTo = 0 /* File */;
+    // Implementing CompilerHost interface
+    this.getNewLine = function () { return ts.sys.newLine; };
+    this.readsFrom = 0 /* File */;
+    this.getSourceFile = this._readFromFile;
+    this.writesTo = 0 /* File */;
+    this.writeFile = this._writeToFile;
+    this.options = options || {};
+    this.options.defaultLibFilename = this.options.defaultLibFilename || '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function compileWithHost(host, sources, tscArgs, options, onError) {
+    return _compile(host, sources, tscArgs, options, onError);
+}
+tsc.compileWithHost = compileWithHost;
+function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.<span class="apidocCodeKeywordSpan">CompositeCompilerHost</span>(options), ts.map(files, function (f
+) { return new tsc.FileSource(f); }), tscArgs, options, onError);
+}
+tsc.compile = compile;
+function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typescript-compiler.CompositeCompilerHost.prototype" id="apidoc.module.typescript-compiler.CompositeCompilerHost.prototype">module typescript-compiler.CompositeCompilerHost.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromFile" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromFile">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_readFromFile
+        <span class="apidocSignatureSpan">(filename, languageVersion, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readFromFile = function (filename, languageVersion, onError) {
+    try {
+        var text = ts.sys.readFile(path.normalize(filename));
+    }
+    catch (e) {
+        if (onError) {
+            onError(e.message);
+        }
+        text = "";
+    }
+    return text !== undefined ? ts.createSourceFile(filename, text, languageVersion, "0") : undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return this;
+};
+//////////////////////////////
+// private methods
+//////////////////////////////
+CompositeCompilerHost.prototype._readFromStrings = function (filename, languageVersion, onError) {
+    if (path.normalize(filename) === this.getDefaultLibFilename())
+        return this.<span class="apidocCodeKeywordSpan">_readFromFile</span>(filename, languageVersion, onError);
+    if (this._sources[filename])
+        return ts.createSourceFile(filename, this._sources[filename], languageVersion, "0");
+    if (this.fallbackToFiles)
+        return this._readFromFile(filename, languageVersion, onError);
+    return undefined;
+};
+CompositeCompilerHost.prototype._writeToString = function (filename, data, writeByteOrderMark, onError) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromStrings" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._readFromStrings">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_readFromStrings
+        <span class="apidocSignatureSpan">(filename, languageVersion, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readFromStrings = function (filename, languageVersion, onError) {
+    if (path.normalize(filename) === this.getDefaultLibFilename())
+        return this._readFromFile(filename, languageVersion, onError);
+    if (this._sources[filename])
+        return ts.createSourceFile(filename, this._sources[filename], languageVersion, "0");
+    if (this.fallbackToFiles)
+        return this._readFromFile(filename, languageVersion, onError);
+    return undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToFile" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToFile">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_writeToFile
+        <span class="apidocSignatureSpan">(fileName, data, writeByteOrderMark, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeToFile = function (fileName, data, writeByteOrderMark, onError) {
+    var existingDirectories = {};
+    function directoryExists(directoryPath) {
+        if (ts.hasProperty(existingDirectories, directoryPath)) {
+            return true;
+        }
+        if (ts.sys.directoryExists(directoryPath)) {
+            existingDirectories[directoryPath] = true;
+            return true;
+        }
+        return false;
+    }
+    function ensureDirectoriesExist(directoryPath) {
+        if (directoryPath.length &gt; ts.getRootLength(directoryPath) &amp;&amp; !directoryExists(directoryPath)) {
+            var parentDirectory = ts.getDirectoryPath(directoryPath);
+            ensureDirectoriesExist(parentDirectory);
+            ts.sys.createDirectory(directoryPath);
+        }
+    }
+    try {
+        if (this._writer) {
+            this._writer(fileName, data, writeByteOrderMark, onError);
+        }
+        else {
+            ensureDirectoriesExist(ts.getDirectoryPath(ts.normalizePath(fileName)));
+            ts.sys.writeFile(fileName, data, writeByteOrderMark);
+        }
+        this._outputs[fileName] = (writeByteOrderMark ? '\uFEFF' : '') + data;
+    }
+    catch (e) {
+        if (onError)
+            onError(e.message);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToString" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype._writeToString">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>_writeToString
+        <span class="apidocSignatureSpan">(filename, data, writeByteOrderMark, onError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeToString = function (filename, data, writeByteOrderMark, onError) {
+    this._outputs[filename] = data;
+    if (this._writer)
+        this._writer(filename, data, writeByteOrderMark, onError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.addSource" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.addSource">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>addSource
+        <span class="apidocSignatureSpan">(nameOrContents, contents)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSource = function (nameOrContents, contents) {
+    var source;
+    if (typeof contents == 'undefined')
+        source = new tsc.StringSource(nameOrContents);
+    else
+        source = new tsc.StringSource(contents, nameOrContents);
+    this._sources[source.filename] = source.contents;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (typeof tscArgs == "string")
+    tscArgs = tscArgs.split(' ');
+else
+    tscArgs = tscArgs || [];
+var commandLine = ts.parseCommandLine(tscArgs);
+var files;
+if (host.readsFrom == 1 /* String */) {
+    sources.forEach(function (s) { return host.<span class="apidocCodeKeywordSpan">addSource</span>(s.filename, s.contents); });
+    files = host.getSourcesFilenames();
+}
+else {
+    files = ts.map(sources, function (s) { return s.filename; }).concat(commandLine.filenames);
+}
+var program = ts.createProgram(files, commandLine.options, host);
+// Query for early errors
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCanonicalFileName" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCanonicalFileName">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getCanonicalFileName
+        <span class="apidocSignatureSpan">(fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCanonicalFileName = function (fileName) {
+    // if underlying system can distinguish between two files whose names differs only in cases then file name already in canonical
+ form.
+    // otherwise use toLowerCase as a canonical form.
+    return ts.sys.useCaseSensitiveFileNames ? fileName : fileName.toLowerCase();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    getDiagnostics: getDiagnostics,
+    getGlobalDiagnostics: getGlobalDiagnostics,
+    getTypeChecker: function (fullTypeCheckMode) { return ts.createTypeChecker(program, fullTypeCheckMode); },
+    getCommonSourceDirectory: function () { return commonSourceDirectory; },
+};
+return program;
+function getSourceFile(filename) {
+    filename = host.<span class="apidocCodeKeywordSpan">getCanonicalFileName</span>(filename);
+    return ts.hasProperty(filesByName, filename) ? filesByName[filename] : undefined;
+}
+function getDiagnostics(sourceFile) {
+    return sourceFile ? ts.filter(errors, function (e) { return e.file === sourceFile; }) : errors;
+}
+function getGlobalDiagnostics() {
+    return ts.filter(errors, function (e) { return !e.file; });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCurrentDirectory" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getCurrentDirectory">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getCurrentDirectory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentDirectory = function () {
+    if (this.getSourceFile === this._readFromStrings)
+        return '';
+    return this._currentDirectory || (this._currentDirectory = ts.sys.getCurrentDirectory());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    return undefined;
+}
+ts.getHeritageClause = getHeritageClause;
+function tryResolveScriptReference(program, sourceFile, reference) {
+    if (!program.getCompilerOptions().noResolve) {
+        var referenceFileName = ts.isRootedDiskPath(reference.filename) ? reference.filename : ts.combinePaths(ts.getDirectoryPath
+(sourceFile.filename), reference.filename);
+        referenceFileName = ts.getNormalizedAbsolutePath(referenceFileName, program.getCompilerHost().<span class="apidocCodeKeywordSpan
+">getCurrentDirectory</span>());
+        return program.getSourceFile(referenceFileName);
+    }
+}
+ts.tryResolveScriptReference = tryResolveScriptReference;
+function getAncestor(node, kind) {
+    switch (kind) {
+        case 185 /* ClassDeclaration */:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getDefaultLibFilename" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getDefaultLibFilename">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getDefaultLibFilename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDefaultLibFilename = function () {
+    return this.options.defaultLibFilename || path.join(__dirname, "lib", "lib.d.ts");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var files = [];
+var filesByName = {};
+var errors = [];
+var seenNoDefaultLib = options.noLib;
+var commonSourceDirectory;
+ts.forEach(rootNames, function (name) { return processRootFile(name, false); });
+if (!seenNoDefaultLib) {
+    processRootFile(host.<span class="apidocCodeKeywordSpan">getDefaultLibFilename</span>(options), true);
+}
+verifyCompilerOptions();
+errors.sort(ts.compareDiagnostics);
+program = {
+    getSourceFile: getSourceFile,
+    getSourceFiles: function () { return files; },
+    getCompilerOptions: function () { return options; },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getSourcesFilenames" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.getSourcesFilenames">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>getSourcesFilenames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSourcesFilenames = function () {
+    var keys = [];
+    for (var k in this.sources)
+        if (this.sources.hasOwnProperty(k))
+            keys.push(k);
+    return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    tscArgs = tscArgs.split(' ');
+else
+    tscArgs = tscArgs || [];
+var commandLine = ts.parseCommandLine(tscArgs);
+var files;
+if (host.readsFrom == 1 /* String */) {
+    sources.forEach(function (s) { return host.addSource(s.filename, s.contents); });
+    files = host.<span class="apidocCodeKeywordSpan">getSourcesFilenames</span>();
+}
+else {
+    files = ts.map(sources, function (s) { return s.filename; }).concat(commandLine.filenames);
+}
+var program = ts.createProgram(files, commandLine.options, host);
+// Query for early errors
+var errors = program.getDiagnostics();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromFiles" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromFiles">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>readFromFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFromFiles = function () {
+    this.readsFrom = 0 /* File */;
+    this.getSourceFile = this._readFromFile;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromStrings" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.readFromStrings">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>readFromStrings
+        <span class="apidocSignatureSpan">(fallbackToFiles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFromStrings = function (fallbackToFiles) {
+    if (fallbackToFiles === void 0) { fallbackToFiles = false; }
+    this.fallbackToFiles = fallbackToFiles;
+    this.readsFrom = 1 /* String */;
+    this.getSourceFile = this._readFromStrings;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.CompositeCompilerHost(options), ts.map(files, function (f) { return new tsc.FileSource(f); }), tscArgs
+, options, onError);
+}
+tsc.compile = compile;
+function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).<span class="apidocCodeKeywordSpan">readFromStrings</span>().writeToString
+();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+        if (typeof input[0] == 'string') {
+            sources = ts.map(input, function (s) { return new tsc.StringSource(s); });
+        }
+        else if (input[0] instanceof tsc.StringSource) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.redirectOutput" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.redirectOutput">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>redirectOutput
+        <span class="apidocSignatureSpan">(writer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">redirectOutput = function (writer) {
+    if (typeof writer == 'function')
+        this._writer = writer;
+    else
+        this._writer = null;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    tsc.compileStrings = compileStrings;
+    function compileString(input, tscArgs, options, onError) {
+        if (typeof input != "string" &amp;&amp; !(input instanceof tsc.StringSource))
+            throw new Error("typescript-compiler#compileString: input parameter should be either a string or a StringSource
+ object");
+        if (input == '')
+            return '';
+        var result = '';
+        var host = new tsc.CompositeCompilerHost(options).readFromStrings().writeToString().<span class="apidocCodeKeywordSpan">
+redirectOutput</span>(function (filename, data) { return result += data; });
+        _compile(host, [input instanceof tsc.StringSource ? input : new tsc.StringSource(input, 'string.ts')], tscArgs
+, options, onError);
+        return result;
+    }
+    tsc.compileString = compileString;
+})(tsc || (tsc = {}));
+module.exports = tsc;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.useCaseSensitiveFileNames" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.useCaseSensitiveFileNames">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>useCaseSensitiveFileNames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">useCaseSensitiveFileNames = function () {
+    return ts.sys.useCaseSensitiveFileNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            errors.push(e);
+        });
+    }
+}
+return file;
+function getSourceFileFromCache(filename, canonicalName, useAbsolutePath) {
+    var file = filesByName[canonicalName];
+    if (file &amp;&amp; host.<span class="apidocCodeKeywordSpan">useCaseSensitiveFileNames</span>()) {
+        var sourceFileName = useAbsolutePath ? ts.getNormalizedAbsolutePath(file.filename, host.getCurrentDirectory()) : file.filename
+;
+        if (canonicalName !== sourceFileName) {
+            errors.push(ts.createFileDiagnostic(refFile, refStart, refLength, ts.Diagnostics.Filename_0_differs_from_already_included_filename_1_only_in_casing
+, filename, sourceFileName));
+        }
+    }
+    return file;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToFiles" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToFiles">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>writeToFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeToFiles = function () {
+    this.writesTo = 0 /* File */;
+    this.writeFile = this._writeToFile;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToString" id="apidoc.element.typescript-compiler.CompositeCompilerHost.prototype.writeToString">
+        function <span class="apidocSignatureSpan">typescript-compiler.CompositeCompilerHost.prototype.</span>writeToString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeToString = function () {
+    this.writesTo = 1 /* String */;
+    this.writeFile = this._writeToString;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function compile(files, tscArgs, options, onError) {
+    if (typeof files == 'string')
+        files = [files];
+    return _compile(new tsc.CompositeCompilerHost(options), ts.map(files, function (f) { return new tsc.FileSource(f); }), tscArgs
+, options, onError);
+}
+tsc.compile = compile;
+function compileStrings(input, tscArgs, options, onError) {
+    var host = new tsc.CompositeCompilerHost(options).readFromStrings().<span class="apidocCodeKeywordSpan">writeToString</span>();
+    var sources = [];
+    if (Array.isArray(input) &amp;&amp; input.length) {
+        // string[]
+        if (typeof input[0] == 'string') {
+            sources = ts.map(input, function (s) { return new tsc.StringSource(s); });
+        }
+        else if (input[0] instanceof tsc.StringSource) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typescript-compiler.StringSource" id="apidoc.module.typescript-compiler.StringSource">module typescript-compiler.StringSource</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.StringSource.StringSource" id="apidoc.element.typescript-compiler.StringSource.StringSource">
+        function <span class="apidocSignatureSpan">typescript-compiler.</span>StringSource
+        <span class="apidocSignatureSpan">(contents, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StringSource(contents, filename) {
+    if (filename === void 0) { filename = StringSource._nextFilename(); }
+    this.contents = contents;
+    this.filename = filename;
+    this.type = 1 /* String */;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.readsFrom = 0 /* File */;
+    this.getSourceFile = this._readFromFile;
+    return this;
+};
+CompositeCompilerHost.prototype.addSource = function (nameOrContents, contents) {
+    var source;
+    if (typeof contents == 'undefined')
+        source = new tsc.<span class="apidocCodeKeywordSpan">StringSource</span>(nameOrContents);
+    else
+        source = new tsc.StringSource(contents, nameOrContents);
+    this._sources[source.filename] = source.contents;
+    return this;
+};
+CompositeCompilerHost.prototype.getSourcesFilenames = function () {
+    var keys = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.StringSource._nextFilename" id="apidoc.element.typescript-compiler.StringSource._nextFilename">
+        function <span class="apidocSignatureSpan">typescript-compiler.StringSource.</span>_nextFilename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_nextFilename = function () {
+    return "input_string" + (++StringSource._counter) + '.ts';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(function (SourceType) {
+    SourceType[SourceType["File"] = 0] = "File";
+    SourceType[SourceType["String"] = 1] = "String";
+})(tsc.SourceType || (tsc.SourceType = {}));
+var SourceType = tsc.SourceType;
+var StringSource = (function () {
+    function StringSource(contents, filename) {
+        if (filename === void 0) { filename = StringSource.<span class="apidocCodeKeywordSpan">_nextFilename</span>(); }
+        this.contents = contents;
+        this.filename = filename;
+        this.type = 1 /* String */;
+    }
+    StringSource._nextFilename = function () {
+        return "input_string" + (++StringSource._counter) + '.ts';
+    };
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typescript-compiler.StringSource.prototype" id="apidoc.module.typescript-compiler.StringSource.prototype">module typescript-compiler.StringSource.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typescript-compiler.StringSource.prototype.resetCounter" id="apidoc.element.typescript-compiler.StringSource.prototype.resetCounter">
+        function <span class="apidocSignatureSpan">typescript-compiler.StringSource.prototype.</span>resetCounter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetCounter = function () {
+    StringSource._counter = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
